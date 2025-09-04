@@ -38,6 +38,7 @@ const StoriesBar = () => {
                         </div>
                     ))
                 }
+                <p>hello</p>
             </div>
         </div>
     )
