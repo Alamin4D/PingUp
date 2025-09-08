@@ -127,7 +127,7 @@ export const dummyPostsData = [
         "user": dummyUserData,
         "content": "We're a small #team with a big vision — working day and night to turn dreams into products, and #products into something people love.",
         "image_urls": [
-            "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg"
+            "https://images.pexels.com/photos/33107538/pexels-photo-33107538.jpeg?_gl=1*w2qqi8*_ga*ODc1NjY4OTk4LjE3NTY5ODA0MDQ.*_ga_8JE65Q40S6*czE3NTcxNDM4OTMkbzMkZzEkdDE3NTcxNDM5MDIkajUxJGwwJGgw"
         ],
         "post_type": "text_with_image",
         "likes_count": [],
