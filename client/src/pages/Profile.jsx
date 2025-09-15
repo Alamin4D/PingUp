@@ -5,6 +5,7 @@ import Loading from '../components/Loading'
 import UserProfileInfo from '../components/UserProfileInfo'
 import PostCard from '../components/PostCard'
 import moment from 'moment'
+import ProfileModal from '../components/ProfileModal'
 
 const Profile = () => {
 
@@ -58,12 +59,12 @@ const Profile = () => {
               {
                 posts.filter((post) => post.image_urls.length > 0).map((post) => (
                   <>
-                  {post.image_urls.map((image, index)=>(
-                    <Link target='_blank' to={image} key={index} className='relative group'>
-                    <img src={image} key={index} className='w-64 aspect-video object-cover' alt=""  />
-                    <p className='absolute bottom-0 right-0 text-xs p-1 px-2 backdrop-blur-xl text-white opacity-0 group-hover:opacity-100 transition duration-300'>Posted {moment(post.createdAt).fromNow()} </p>
-                    </Link>
-                  ))}
+                    {post.image_urls.map((image, index) => (
+                      <Link target='_blank' to={image} key={index} className='relative group'>
+                        <img src={image} key={index} className='w-64 aspect-video object-cover' alt="" />
+                        <p className='absolute bottom-0 right-0 text-xs p-1 px-2 backdrop-blur-xl text-white opacity-0 group-hover:opacity-100 transition duration-300'>Posted {moment(post.createdAt).fromNow()} </p>
+                      </Link>
+                    ))}
                   </>
                 ))
               }
@@ -72,7 +73,7 @@ const Profile = () => {
         </div>
       </div>
       {/* Edit Profile Modal */}
-      {showEdit && <p>show profile edit</p>}
+      {showEdit && <ProfileModal setShowEdit={setShowEdit} />}
     </div>
   ) : (
     <Loading />
